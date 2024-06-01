@@ -1,7 +1,7 @@
 
 import './App.css'
 import { useState } from 'react';
-import PropTypes from 'prop-types';
+
 
 function App() {
     let [todolist,setTodolist] = useState([])
@@ -37,13 +37,14 @@ function App() {
       </form>
     <div className='OuterDiv'></div>
       <ul>
-        {list}
+        <h2>{list}</h2>
       </ul>
     </div>
 
   );
 } 
 export default App
+
 
 
 

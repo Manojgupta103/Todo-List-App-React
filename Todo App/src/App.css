@@ -1,10 +1,22 @@
-#root {
+:root {
   max-width: 1250px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  /* color-scheme: light dark; */
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #242424;
+  line-height: 1.5;
+  font-weight: 400;
+  background-image: url(1.png);
+  background-size: cover;
+  height: '100vh';
+  width: '100vw',
 }
+
 button {
+  font-size: medium;
+  color: aqua;
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -30,6 +42,7 @@ button:focus-visible {
   }
   a:hover {
     color: #747bff;
+    
   }
   button {
     background-color: #f9f9f9;
@@ -44,8 +57,10 @@ form{
 }
 
 form input{
+  border-radius: 8px;
   height: 40px;
   flex-basis: 80%;
+  font-size: medium;
 }
 
 form button{
@@ -57,13 +72,14 @@ form button{
 }
 
 .OuterDiv ul{
+  font-size: medium !important;
   margin: 0px;
   padding: 0px;
   list-style: none;
 }
 
 .OuterDiv ul li{
-  color: rgb(255, 255, 255);
+  color: rgb(53, 14, 14);
   padding: 10px;
   font-size: 25px;
   margin-bottom: 20px;
@@ -76,6 +92,7 @@ form button{
   right: 20px;
   cursor: pointer;
   position: absolute;
+  color: black;
 }
 
 .completetodo{
@@ -83,3 +100,4 @@ form button{
   color: red;
   background-color: yellow;
 }
+
