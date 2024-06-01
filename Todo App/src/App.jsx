@@ -1,6 +1,7 @@
 
 import './App.css'
 import { useState } from 'react';
+import PropTypes from 'prop-types';
 
 function App() {
     let [todolist,setTodolist] = useState([])
@@ -19,11 +20,14 @@ function App() {
         }
         event.preventDefault();
         }  
-        let list=todolist.map((value,index)=>{
+        let list = todolist.map((value, index) => {
+
           return (
-            <ToDoListItems value={value}/>
-          )
-        })
+            <ToDoListItems key={index} value={value} indexnumber={index} todolist= {todolist} 
+            setTodolist={setTodolist}
+            />
+          );
+        });
   return (
     <div className="App">
       <h1>Todo List App</h1>
@@ -41,8 +45,19 @@ function App() {
 } 
 export default App
 
-function ToDoListItems({value}){
+
+
+function ToDoListItems({value, indexnumber, todolist, setTodolist}){
+
+  let deleteRow=()=>{
+let finalData=todolist.filter((value,index)=>index!=indexnumber);
+console.log(finalData)
+  }
   return(
-    <li>{value} <span>&times;</span></li>
+    <li>{value} <span onClick={deleteRow}>&times;</span></li>
   )
 }
+
+ToDoListItems.propTypes = {
+  value: PropTypes.string.isRequired
+};
