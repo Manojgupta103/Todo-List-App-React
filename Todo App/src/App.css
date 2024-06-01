@@ -1,0 +1,23 @@
+#root {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+form{
+  width: 1170px;
+  margin: auto;
+  display: flex;
+  gap: 20px;
+}
+
+form input{
+  height: 40px;
+  flex-basis: 80%;
+}
+
+form button{
+  flex-basis: 20%;
+}
+
