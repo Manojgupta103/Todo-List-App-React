@@ -51,10 +51,10 @@ function ToDoListItems({value, indexnumber, todolist, setTodolist}){
 
   let deleteRow=()=>{
 let finalData=todolist.filter((value,index)=>index!=indexnumber);
-console.log(finalData)
-  }
+    setTodolist(finalData)
+}
   return(
-    <li>{value} <span onClick={deleteRow}>&times;</span></li>
+    <li>{indexnumber + 1} {value}<span onClick={deleteRow}> &times; </span></li>
   )
 }
 
