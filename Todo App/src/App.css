@@ -4,6 +4,37 @@
   padding: 2rem;
   text-align: center;
 }
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
 
 form{
   width: 1170px;
@@ -20,4 +51,29 @@ form input{
 form button{
   flex-basis: 20%;
 }
+.OuterDiv{
+  width: 1170px;
+  margin: auto;
+}
 
+.OuterDiv ul{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+.OuterDiv ul li{
+  color: white;
+  padding: 10px;
+  font-size: 25px;
+  margin-bottom: 20px;
+  background-color: black;
+  text-align: left;
+  position: relative;
+}
+
+.OuterDiv ul li span{
+  right: 20px;
+  cursor: pointer;
+  position: absolute;
+}

@@ -7,9 +7,11 @@ function App() {
 
       let saveTodoList=(event)=>{
 
-        
+
         let toname=event.target.toname.value;
         if(!todolist.includes(toname)){
+          let finalDolist=[...todolist,toname];
+          setTodolist(finalDolist)
 
         }
         else{
@@ -17,6 +19,11 @@ function App() {
         }
         event.preventDefault();
         }  
+        let list=todolist.map((value,index)=>{
+          return (
+            <ToDoListItems value={value}/>
+          )
+        })
   return (
     <div className="App">
       <h1>Todo List App</h1>
@@ -24,8 +31,18 @@ function App() {
         <input type="text" name='toname' placeholder="Enter Task" />
         <button type="submit">Add</button>
       </form>
+    <div className='OuterDiv'></div>
+      <ul>
+        {list}
+      </ul>
     </div>
 
   );
 } 
 export default App
+
+function ToDoListItems({value}){
+  return(
+    <li>{value} <span>&times;</span></li>
+  )
+}
